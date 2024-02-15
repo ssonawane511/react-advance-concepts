@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+## pure componets
+Rerender only when props or state is changes.
+It shallow compare the state with new state object / props with new props object if any key value is change in any of object it will only rerender the component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**syntax**
+```javascript
+export default class component-name extends PureComponent { }
+```
 
-## Available Scripts
+**Usage** 
+- Skipping unnecessary re-renders for class components  
+React normally re-renders a component whenever its parent re-renders. As an optimization, Pure component can be used a component that React will not re-render when its parent re-renders so long as its new props and state are the same as the old props and state
 
-In the project directory, you can run:
+**Converting a purec component to a functional component**
+```javascript
+#pure component
+class Greeting extends PureComponent {
+  render(
+    return (<div> </div>)
+  )
+}
 
-### `npm start`
+#functional component
+const Greeting = memo(function Greeting(props) {
+  return( <div> </div>)
+});
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**note**
+memo lets you skip re-rendering a component when its props are unchanged.
+```javascript
+const MemoizedComponent = memo(SomeComponent, arePropsEqual?)
+````
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Memo Usage**
+- Skipping re-rendering when props are unchanged
+- Updating a memoized component using state
+- Updating a memoized component using a context
+- Minimizing props changes
+- Specifying a custom comparison function
