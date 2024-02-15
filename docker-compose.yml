@@ -2,6 +2,10 @@ version: "1.0"
 
 services: 
   purecomponents:
-    build: ./pure-components
+    build: ./pure components
     ports: 
       - "3000:3000"
+  hoc:
+    build: ./higher order components
+    ports:
+      - "30001:3000"
