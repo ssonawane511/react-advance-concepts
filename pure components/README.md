@@ -4,5 +4,5 @@ It shallow compare the state with new state object / props with new props object
 
 **syntax**
 ```react
-export default component-name extends PureComponent { }
+export default class component-name extends PureComponent { }
 ```
