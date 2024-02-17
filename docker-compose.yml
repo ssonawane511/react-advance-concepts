@@ -8,4 +8,8 @@ services:
   hoc:
     build: ./higher order components
     ports:
-      - "30001:3000"
+      - "3001:3000"
+  poratls:
+    build: ./Portals
+    ports:
+      - "3002:3000"
