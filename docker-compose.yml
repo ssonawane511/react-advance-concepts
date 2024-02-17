@@ -13,3 +13,11 @@ services:
     build: ./Portals
     ports:
       - "3002:3000"
+  forwarref:
+    build: ./ForwardRefs
+    ports:
+      - "3003:3000"
+  errorboundaries:
+    build: ./ErrorBoundaries
+    ports:
+      - "3004:3000"
