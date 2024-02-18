@@ -18,6 +18,10 @@ services:
     ports:
       - "3003:3000"
   errorboundaries:
-    build: ./ErrorBoundaries
+    build: ./ErrorBoundagries
     ports:
       - "3004:3000"
+  customhook:
+    build: ./Custom hook
+    ports:
+      - "3005:3000"
