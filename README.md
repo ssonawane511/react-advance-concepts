@@ -4,12 +4,12 @@ This repository contains custom React hooks and components aimed at enhancing re
 
 ## Concepts
 
-- [Custom Hook](CustomHook/README.md)
 - [Error Boundaries](ErrorBoundaries/README.md)
 - [Forward Refs](ForwardRefs/README.md)
 - [Portals](Portals/README.md)
-- [Higher Order Components](HigherOrderComponents/README.md)
-- [Pure Components](PureComponents/README.md)
+- [Higher Order Components](higher%20order%20components/README.md)
+- [Pure Components](pure%20components/README.md)
+- [Custom Hook](Custom%20hook/README.md)
 
 ---
 
