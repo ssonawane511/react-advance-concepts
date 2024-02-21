@@ -35,4 +35,4 @@ The `HigherOrderComponents` folder contains components and utilities related to 
 
 ## Pure Components
 
-The `PureComponents` folder contains components and utilities related to pure components in React, which re-render only when their props or state change, optimizing performance by performing shallow comparisons of props and state. Pure components are useful for scenarios where you want to prevent unnecessary re-renders in class components.
+The `PureComponents` folder contains components and utilities related to pure components in React, which re-render only when their props or state change, optimizing performance by performing shallow comparisons of props and state. Pure components are useful for scenarios where you want to prevent unnecessary re-renders in class components
